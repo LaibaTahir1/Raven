@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import About from './Components/About';
+import Discription from './Components/Discription';
+import Header from './Components/Header';
+import NFTcard from './Components/NFTcard';
+import Sidebar from './Components/Sidebar';
+import SubHeading from './Components/SubHeading';
+import Layout from './layout/Layout';
+import Home from './pages/Home';
+import Staking from './pages/Staking';
+import SPage from './Components/SPage';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <Routes>
+      <Route path='/' element={<Home />}></Route>
+      <Route path='/staking' element={<Staking />}></Route>
+    </Routes>
+    
   );
 }
 
